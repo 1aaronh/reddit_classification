@@ -43,7 +43,7 @@ The AUC score is almost perfect. The model likely benefitted from the fact that 
 - TF-IDF
 This model printed test accuracy of 93.5%. We can verify the slight outperformance by comparing the same metrics:
 
-![](https://github.com/1aaronh/reddit_classification/blob/master/images/tfid_confusionatrix.png)
+![](https://github.com/1aaronh/reddit_classification/blob/master/images/tfid_confusionmatrix.png)
 Interesting observation that TF-IDF slightly underperforms the CountVectorizer model on the gaming category. Future tests would incorporate more data to see if this pattern holds.
 
 ![](https://github.com/1aaronh/reddit_classification/blob/master/images/tfid_roc.png)
