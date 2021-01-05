@@ -22,7 +22,7 @@ After feature engineering, the two dataframes were concatenated vertically with 
 ---
 Stop words were removed and the default token pattern was selected to remove punctuation when using both TF-IDF and CountVectorizer. The max_features count for EDA purposes was chosen at 2000. EDA was performed from the results of the TF-IDF vectors with different N-gram ranges. Below is an example of an N-gram range of 2:
 
-![](https://github.com/1aaronh/reddit_classification/blob/master/images/tf_2gram.png)
+![](./images/tf_2gram.png)
 
 Many of the vectors are generic and can be found in any subreddit. Titles of specific games or movies do stand out though.
 
@@ -35,22 +35,22 @@ A basic Logistic Regression model was selected for each method of vectorizing. B
 - CountVectorizer
 The model fit with CountVectorizer delivered a test accuracy of 91.6%. Below are this models metrics:
 
-![](https://github.com/1aaronh/reddit_classification/blob/master/images/cvec_confusionmatrix.png)
+![](./images/cvec_confusionmatrix.png)
 
 The model did very well at distinguishing between the subreddits.
 
-![](https://github.com/1aaronh/reddit_classification/blob/master/images/cvec_roc.png)
+![](./images/cvec_roc.png)
 
 The AUC score is almost perfect. The model likely benefitted from the fact that the classes were already reasonably balanced in the original data.
 
 - TF-IDF
 This model printed test accuracy of 93.5%. We can verify the slight outperformance by comparing the same metrics:
 
-![](https://github.com/1aaronh/reddit_classification/blob/master/images/tfid_confusionmatrix.png)
+![](./images/tfid_confusionmatrix.png)
 
 Interesting observation that TF-IDF slightly underperforms the CountVectorizer model on the gaming category. Future tests would incorporate more data to see if this pattern holds.
 
-![](https://github.com/1aaronh/reddit_classification/blob/master/images/tfid_roc.png)
+![](./images/tfid_roc.png)
 
 Slight outperformance on ROC Curve when we consider overall classification between classes.
 
